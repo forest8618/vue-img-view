@@ -1,12 +1,6 @@
 # vue-img-view
 
 > Vue 图片组件
->  npm install vue-img-view
->  import imgView from 'vue-img-view'
->  Vue.use(imgView)
-
-> <img-view :imgUrl="imgUrl" :background="background"></img-view>
-
 
 ## Install
 
