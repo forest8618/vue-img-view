@@ -1,18 +1,31 @@
 # vue-img-view
 
-> A Vue.js project
+> Vue 图片组件
+>  npm install vue-img-view
+>  import imgView from 'vue-img-view'
+>  Vue.use(imgView)
 
-## Build Setup
+> <img-view :imgUrl="imgUrl" :background="background"></img-view>
+
+
+## Install
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
+# install
+npm install vue-img-view
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Setup
+
+``` javascript
+import imgView from 'vue-img-view'
+Vue.use(imgView)
+```
+
+
+## Use
+
+``` html
+<img-view :imgUrl="imgUrl" :background="background"></img-view>
+```
