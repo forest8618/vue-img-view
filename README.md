@@ -3,7 +3,7 @@
 > Vue 图片组件
 
 ## DEMO
-[DEMO](https://la7ender.github.io/vue-img-view/ "demo").
+[DEMO](https://la7ender.github.io/vue-img-view/ "demo")
 ## Install
 
 ``` bash
