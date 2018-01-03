@@ -1,6 +1,6 @@
 # vue-img-view
 
-> Vue 图片组件
+> Vue 图片组件 (缩放,旋转,拖动)
 
 ## DEMO
 [DEMO](https://la7ender.github.io/vue-img-view/ "demo")
