@@ -1,5 +1,5 @@
 <template>
-  <div :style="styleObjectWrapper" id="imgWrapper" @mouseover="onMouseOver">
+  <div :style="styleObjectWrapper" ref="imgWrapper" @mouseover="onMouseOver">
     <div :style="styleObjectImg" @mousedown="onMouseDown" @mousemove="onMouseMove($event)" @mouseup="onMouseUp" @mouseout="onMouseOut" @dragstart="onDragStart" @mouseover="onMouseOver" @wheel.prevent.stop="onScroll">
     </div>
     <span v-show="onMouseOverFlag" :style="styleObjectHandle" @mouseover="onMouseOver" @mouseout="onMouseOut">
@@ -58,13 +58,9 @@ export default {
     imgUrl () {
       let vm = this;
       vm.$nextTick(function () {
-        vm.computedHeight = document.getElementById(
-          "imgWrapper"
-        ).offsetHeight;
-        vm.computedWidth = document.getElementById("imgWrapper").offsetWidth;
+        let imgWrapper = vm.$refs.imgWrapper
         vm.styleObjectImg.backgroundImage = "url(" + vm.imgUrl + ")";
         vm.init().then(() => {
-          let imgWrapper = document.getElementById("imgWrapper");
           vm.$nextTick(function () {
             vm.computedHeight = imgWrapper.offsetHeight;
             vm.computedWidth = imgWrapper.offsetWidth;
@@ -90,7 +86,7 @@ export default {
   },
   mounted () {
     let vm = this;
-    let imgWrapper = document.getElementById("imgWrapper");
+    let imgWrapper = vm.$refs.imgWrapper
     vm.init().then(() => {
       vm.$nextTick(function () {
         vm.computedHeight = imgWrapper.offsetHeight;
@@ -111,8 +107,8 @@ export default {
         vm.styleObjectImg.backgroundSize = vm.imgWidth + "px " + vm.imgHeight + "px";
         vm.styleObjectImg.backgroundPosition = (vm.computedWidth - vm.imgWidth) / 2 + "px " + (vm.computedHeight - vm.imgHeight) / 2 + "px";
         window.onresize = () => {
-          vm.computedHeight = document.getElementById("imgWrapper").offsetHeight;
-          vm.computedWidth = document.getElementById("imgWrapper").offsetWidth;
+          vm.computedHeight = vm.$refs.imgWrapper.offsetHeight;
+          vm.computedWidth = vm.$refs.imgWrapper.offsetWidth;
         }
       });
     })
@@ -120,10 +116,8 @@ export default {
   updated () {
     let vm = this
     if (parseInt(this.computedWidth) === 0) {
-      vm.computedHeight = document.getElementById("imgWrapper").offsetHeight;
-      vm.computedWidth = document.getElementById("imgWrapper").offsetWidth;
+      let imgWrapper = vm.$refs.imgWrapper;
       vm.init().then(() => {
-        let imgWrapper = document.getElementById("imgWrapper");
         vm.$nextTick(function () {
           vm.computedHeight = imgWrapper.offsetHeight;
           vm.computedWidth = imgWrapper.offsetWidth;
@@ -314,15 +308,12 @@ export default {
 };
 </script>
 <style scoped>
-* {
-  user-select: none;
-}
 .rotate {
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   display: inline-block;
   position: relative;
-  margin: 3px 3px;
+  margin: 3px 10px;
   border: 3px solid #6495ed;
   border-radius: 100%;
 }
