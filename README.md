@@ -1,6 +1,9 @@
 # vue-img-view
 
-> Vue 图片组件
+> a plugin for Vue.js, you can drag / view / rotate pictures anywhere  
+
+## DEMO
+[DEMO](https://la7ender.github.io/vue-img-view/ "demo")
 
 ## Install
 
