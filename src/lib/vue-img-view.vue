@@ -106,10 +106,6 @@ export default {
         vm.styleObjectImg.top = '0px';
         vm.styleObjectImg.backgroundSize = vm.imgWidth + "px " + vm.imgHeight + "px";
         vm.styleObjectImg.backgroundPosition = (vm.computedWidth - vm.imgWidth) / 2 + "px " + (vm.computedHeight - vm.imgHeight) / 2 + "px";
-        window.onresize = () => {
-          vm.computedHeight = vm.$refs.imgWrapper.offsetHeight;
-          vm.computedWidth = vm.$refs.imgWrapper.offsetWidth;
-        }
       });
     })
   },
