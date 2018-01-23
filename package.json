@@ -1,7 +1,7 @@
 {
   "name": "vue-img-view",
   "description": "Vue 图片查看组件",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "la7ender <992557885@qq.com>",
   "license": "MIT",
   "private": false,

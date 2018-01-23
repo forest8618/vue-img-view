@@ -49,6 +49,7 @@ export default {
       styleObjectHandle: {
         textAlign: "center",
         position: "absolute",
+        userSelect: 'none',
         right: "10px",
         bottom: "10px"
       }
@@ -305,11 +306,11 @@ export default {
 </script>
 <style scoped>
 .rotate {
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   display: inline-block;
   position: relative;
-  margin: 3px 10px;
+  margin: 3px 3px;
   border: 3px solid #6495ed;
   border-radius: 100%;
 }

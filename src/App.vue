@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img-view style="width:400px;height:400px;" :imgUrl="imgUrl" background="#000"></img-view>
+    <img-view style="width:80%;height:80%;position:absolute;" :imgUrl="imgUrl" background="#000"></img-view>
   </div>
 </template>
 
